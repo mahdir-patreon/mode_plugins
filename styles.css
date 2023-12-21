@@ -1,0 +1,109 @@
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .dropdown {
+      text-align: left;
+
+    }
+
+    .dropdown>ul>li:not(:last-child) {
+      border-right: 1px solid #fff;
+      /* White separator for dark backgrounds */
+      /* If your background is light, use a darker color for the separator */
+    }
+
+    /* Ensure that the separators don't add to the width of the list items (which can misalign text) */
+    .dropdown>ul>li {
+      box-sizing: border-box;
+    }
+
+    /* Adjust the padding of the list items to create space for the separator */
+    .dropdown>ul>li>span {
+      padding: 10px 25px;
+      /* Increase right padding to accommodate the separator */
+    }
+
+    .dropdown>ul {
+      border-top-left-radius: 0;
+      /* Remove the top border-radius */
+      border-top-right-radius: 0;
+      /* Since the label now has it */
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #f96854;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .dropdown>ul>li {
+      position: relative;
+      color: white;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .dropdown>ul>li>span {
+      padding: 10px 20px;
+      cursor: pointer;
+      display: block;
+      transition: background-color 0.3s;
+      font-size: 14px;
+
+    }
+
+    .dropdown>ul>li>span:after {
+      content: ' ▼';
+      font-size: smaller;
+    }
+
+    .dropdown>ul>li>span:hover {
+      background-color: #c25040;
+    }
+
+    .dropdown ul li ul {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 0 0 4px 4px;
+      z-index: 1000;
+      padding: 0;
+      /* Remove padding */
+      border: none;
+      /* Remove border */
+
+    }
+
+    .dropdown ul li ul li {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .dropdown ul li ul li a {
+      color: #333;
+      padding: 10px 20px;
+      /* Adjust padding to match the parent menu item */
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown ul li ul li a:hover {
+      background-color: #f2f2f2;
+    }
+
+    .dropdown>ul>li:first-child>span,
+    .dropdown>ul>li:last-child>span {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  </style>
